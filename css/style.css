@@ -1,0 +1,93 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores principales */
+:root {
+    --color-fondo: #242121;              /* Fondo de la página */
+    --color-contenedor: #1e1e1e;         /* Fondo del contenedor */
+    --color-tarjeta: #252526;            /* Fondo de las tarjetas */
+    --color-texto: #ffffff;              /* Texto principal: título */
+    --color-texto-secundario: #d4d4d4;  /* Texto secundario: enunciado */
+}
+
+/* Página */
+body {
+    display: grid;
+    place-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+}
+
+/* Contenedor de las tarjetas */
+.caja-grande {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+
+    background-color: var(--color-contenedor);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+.titulo-principal {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    color: var(--color-texto);
+    text-align: center;
+}
+
+/* Tarjeta */
+.tarjeta-ejercicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+
+    background-color: var(--color-tarjeta);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto de la tarjeta */
+.tarjeta-ejercicio__enunciado {
+    margin-bottom: 12px;
+
+    font-size: 15px;
+    color: var(--color-texto-secundario);
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Botón */
+.tarjeta-ejercicio__boton {
+    width: 100%;
+    padding: 10px;
+
+    font-size: 14px;
+    color: #cbd5e1;
+
+    background-color: #272d3d6e;
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-ejercicio__boton:hover {
+    background-color: #95b67939;
+    border-color: #bcc2cb;
+}
